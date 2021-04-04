@@ -1,103 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="height=device-height, 
-                      width=device-width, initial-scale=1.0, 
-                      minimum-scale=1.0, maximum-scale=1.0, 
-                      user-scalable=no, target-densitydpi=device-dpi">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/6fce902f63.js" crossorigin="anonymous"></script>
-    <script src="scripts.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <title>VanHack's Event Page</title>
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="css/flappy.css">
+    <link href="https://fonts.googleapis.com/css?family=Lilita+One&display=swap" rel="stylesheet">
 </head>
-<header>
-    <h1 class="logo">VanHack<span>Events</span></h1>
-    <li class="toggle-menu"><i onclick="toggleMenu()" class="fas fa-bars fa-lg"></i></li>
-    <nav>
-        <ul class="nav-links">
-            <li><a class="active-link" href="#">Events</a></li>
-            <li><a href="#">Premium</a></li>
-            <li><a href="#">Find a Job</a></li>
-        </ul>
-    </nav>
-</header>
 
-<body>
-    <section class="upper-section">
-        <h1>Take a look at our events!</h1>
-        <p>Webinar, MeetUp, Leap, Recruiting Mission, VanHackathon, and much more!</p>
-        <button onclick="moveToEvents()">See events!</button>
-    </section>
-
-    <!-- This svg to create a cool css divider was made by CMDW and can be found at https://codepen.io/cmdw/pen/vQqzyB -->
-    <svg class="editorial"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        viewBox="0 24 150 28 "
-        preserveAspectRatio="none">
-    <defs>
-    <path id="gentle-wave"
-    d="M-160 44c30 0 
-        58-18 88-18s
-        58 18 88 18 
-        58-18 88-18 
-        58 18 88 18
-        v44h-352z" />
-    </defs>
-    <g class="parallax1">
-    <use xlink:href="#gentle-wave" x="50" y="3" fill="#f461c1"/>
-    </g>
-        <g class="parallax2">
-    <use xlink:href="#gentle-wave" x="50" y="0" fill="#4579e2"/>
-        </g>
-        <g class="parallax3">
-    <use xlink:href="#gentle-wave" x="50" y="9" fill="#3461c1"/>
-    </g>
-        <g class="parallax4">
-    <use xlink:href="#gentle-wave" x="50" y="6" fill="#97a5a7"/>  
-    </g>
-    </svg>
-
-    <section class="lower-section">
-        <h1 id="events">Available events</h1>
-        <div class="cards"></div>
-    </section>
-
-    <div class="modal">
-        <div class="modal-content"></div>
-    </div>
-
-    <div class="popup"></div>
-
-    <div class="applied-popup">
-        <div class="applied-popup-content">
-            <span class="applied-popup-info">
-                <div onclick="toggleAppliedPopup()">&times;</div>
-                <p>Congratulations, you have applied to the event!</p>
-            </span>
-            <span class="applied-popup-buttons">
-                <button onclick="toggleAppliedPopup()">Close.</button>
-            </span>
-        </div>
-    </div>
-
-    <div class="premiumonly-popup">
-        <div class="premiumonly-popup-content">
-            <span class="premiumonly-popup-info">
-                <div onclick="togglePremiumPopup()">&times;</div>
-                <p>This event is reserved only for premium members. 
-                    <br><br>With VanHack Premium you will acquire career skills that will make you stand out from the herd! 
-                    Live interview practice, profile review, exclusive webinars & more.
-                </p>
-            </span>
-            <span class="premiumonly-popup-buttons">
-                <button onclick="redirectToPremium()">See how to become premium.</button>
-            </span>
-        </div>
-    </div>
+<body class="content">
+    <h1>Flappy Bird</h1>
+    <div jps-flappy></div>
+    <script src="js/barriers.js"></script>
+    <script src="js/bird.js"></script>
+    <script src="js/game.js"></script>
 </body>
 
 </html>
